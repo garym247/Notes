@@ -19,8 +19,8 @@ Possible values for `<project template>` can be:
 
 Examples:
 
-`dotnet new console -n HelloWorld`
-`dotnet new console -n "Hello World With Spaces`
+`dotnet new console -n HelloWorld`\
+`dotnet new console -n "Hello World With Spaces`\
 `dotnet new sln -n HelloWorld`
 `
 * Notes: Enclose \<solution name> in quotes if it contains spaces.
@@ -30,7 +30,7 @@ Examples:
 Lists all the available templates for creating a project
 
 # dotnet sln
-`dotnet sln <solution name>.sln add <project name>.csproj`
+`dotnet sln <solution name>.sln add <project name>.csproj`\
 `dotnet sln patterns.sln add policy\policy.csproj`
 
 ## dotnet \<project name>.csproj reference \<project name>.csproj

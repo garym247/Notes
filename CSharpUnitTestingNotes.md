@@ -7,16 +7,21 @@
 # xUnit
 
 ## [Fact]
-
+Runs single test
 ## [Theory]
-
+Allows to run the same test with multiple datasets
 #
 
 # Handy Packages
+The following packages are available for unit testing:
+* Fluent Assertions
+* Moq
 
 ## FluentAssertions
 
 Is a unit testing assertion framework
+
+To install:
 
 From the Package Manager:
 
