@@ -2,7 +2,7 @@
 * GitKraken
 * SourceTree (only available for Windows and MacOS)
 * posh-git 
-
+* Git Extensions
 
 # Configuring Git
 
@@ -36,16 +36,30 @@
 
 ```git config --global autocrlf true```
 
-Configuring Difference and Merge Tools (run in Command Prompt not Powershell)
 
+## Configuring Difference and Merge Tools (run in Command Prompt not Powershell)
 
-```git config --global diff.tool diffmerge```\
-```git config --global difftool.diffmerge.cmd "C:\Program Files\SourceGear\Common\DiffMerge\sgdm.exe \"$LOCAL\" \"$REMOTE\""```\
-```git config --global merge.tool diffmerge```\
-```git config --global mergetool.diffmerge.trustExitCode true```\
-```git config --global mergetool.diffmerge.cmd "C:/Program\ Files/SourceGear/Common/DiffMerge/gdm.exe-merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\""```\
-```git config --global difftool vscode```\
-```git config --global difftool.vs.cmd "code --wait --diff $LOCAL $REMOTE"```
+### Configure using DiffMerge
+```
+git config --global diff.tool diffmerge
+git config --global difftool.diffmerge.cmd "C:\Program Files\SourceGear\Common\DiffMerge\sgdm.exe \"$LOCAL\" \"$REMOTE\""
+git config --global merge.tool diffmerge
+git config --global mergetool.diffmerge.trustExitCode true
+git config --global mergetool.diffmerge.cmd "C:/Program\ Files/SourceGear/Common/DiffMerge/gdm.exe-merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\""
+git config --global difftool vscode
+git config --global difftool.vs.cmd "code --wait --diff $LOCAL $REMOTE"
+```
+
+### Configure using KDiff3
+```
+git config --global merge.tool kdiff3
+git config --global mergetool.kdiff3.path "C:/Program Files/KDiff3/bin/kdiff3.exe"
+git config --global mergetool.kdiff3.trustExitCode false
+
+git config --global diff.guitool kdiff3
+git config --global difftool.kdiff3.path "C:/Program Files/KDiff3/bin/kdiff3.exe"
+git config --
+```
 
 # Repos
 
