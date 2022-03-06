@@ -247,26 +247,29 @@ Use `-D` option (instead of `-d`) to forcibly delete the local branch, i.e. disc
 
 # Diffing and Merging
 
-```git diff```
-
 ```git difftool```
-* Shows the unstaged differences only.
 
-```git merge <branch name>```
+* Show the unstaged differences only.
 
-```git mergetool <branch name>```
+```git difftool <branch name>```
+
 * Shows the current differences (staged and unstaged) to the master branch.
-
-```git merge```
 
 ```git mergetool```
 * todo
 
-```git merge <branch name>```
-
 ```git mergetool <branch name>```
 * both merge the current branch to &lt;`branch name>`.
 
+## Resolving conflicts
+```git log --merge```
+* lists the commits that are causing the conflict
+
+```git reset mixed```
+* Undoes the changes to working directory area and staging area.
+  
+``` git merge --abort```
+* exits the merge process and returns the repo to the state before merging began.
 
 # Querying the Repo
 
@@ -286,6 +289,8 @@ git log origin/master ^master
 To see the outgoing changesets:
 ```
 TODO
-git fetch origin
-git log origin/master ^master
 ```
+
+
+# To sort
+```git reset```

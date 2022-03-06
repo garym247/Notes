@@ -13,11 +13,20 @@
 ```Get-Host```
 * Returns system version for PowerShell host, e.g. version
 
+```Get-ExecutionPolicy```
+* todo
+
+```Set-ExecutionPolicy RemoteSigned -Scope CurrentUser -Confirm```
+* todo
+
 ```$env:computername```
 * Returns the computer name.
 
 ```netsh http show urlacl```
 * Network shell command
+
+$PSVersionTable.PSVersion
+
 
 
 # Select-String
