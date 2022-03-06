@@ -69,6 +69,9 @@ Configuring Difference and Merge Tools (run in Command Prompt not Powershell)
 * returns the URL from which the repo was cloned
 
 
+git log origin/master ^master
+
+
 # Changesets
 ## CRUDing Staged Files
 
@@ -159,11 +162,19 @@ git stash apply
 ## Updating branches
 
 ```git fetch```
+* fetches changes from default remote (origin), to all the tracked branches 
+* only the repo's metadata is updated, it does not update the actual files
+  
+```git fetch origin master```
+* fetches changes from the origin remote, master branch
+* does current local branch have to be the master?
 
-```git fetch origin```
+```git pull```
+* pulls changes from default remote (origin), to all the tracked branches 
 
-```git pull origin```
-
+```git pull origin master```
+* pulls changes from the origin remote, master branch
+* does current local branch have to be the master?
 
 ## Deleting branches
 
@@ -203,3 +214,17 @@ Use `-D` option (instead of `-d`) to forcibly delete the local branch, i.e. disc
 lists fetch and push repos
 
 remote branches
+
+# HowTos
+To see the incoming changesets:
+```
+git fetch origin
+git log origin/master ^master
+```
+
+To see the outgoing changesets:
+```
+TODO
+git fetch origin
+git log origin/master ^master
+```
