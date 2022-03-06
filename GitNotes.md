@@ -2,7 +2,7 @@
 * GitKraken
 * SourceTree (only available for Windows and MacOS)
 * posh-git 
-
+* Git Extensions (http://gitextensions.github.io)
 
 # Configuring Git
 
@@ -20,32 +20,78 @@
 ## Checking the current configuration of Git
 
 ```git config --list```
+
 ```git config --global --list```
+
 ```git config --global user.name <name of user>```
-```git config --global user.email <user email address>``
+
+```git config --global user.email <user email address>```
+
 ```git config --global  core.editor "code --wait" ```
 * sets VS Code as Git’s default editor
 
 
 ```git config --global -e```
-
-
-
 * allows the user edit the global configuration settings via the Git’s default editor
 
 
 ```git config --global autocrlf true```
+* todo
 
-Configuring Difference and Merge Tools (run in Command Prompt not Powershell)
+## Configuring Difference and Merge Tools (run in Command Prompt not Powershell)
+
+vimdiff is the default tool for diff'ing and merging. 
+
+To remove the "Are you sure" prompt, when loading the diff or merge tool
+```
+git config --global difftool.prompt false
+git config --global mergetool.prompt false
+```
+
+### Configure using VSCode 
+git config --global difftool vscode
+git config --global difftool.vs.cmd "code --wait --diff $LOCAL $REMOTE"
+
+### Configure using WinMerge
+```
+git config --global diff.tool winmerge
+TODO
+
+git config --global merge.tool winmerge
+TODO
+```
+
+### Configure using DiffMerge
+```
+git config --global diff.tool diffmerge
+git config --global difftool.diffmerge.cmd "C:\Program Files\SourceGear\Common\DiffMerge\sgdm.exe \"$LOCAL\" \"$REMOTE\""
+
+git config --global merge.tool diffmerge
+git config --global mergetool.diffmerge.trustExitCode true
+git config --global mergetool.diffmerge.cmd "C:/Program\ Files/SourceGear/Common/DiffMerge/gdm.exe-merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\""
+```
+
+### Configure using KDiff3
+.gitconfg file
+
+```
+[diff]
+	tool = kdiff3
+[difftool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+	cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
+[difftool]
+	prompt = false	 
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	path = C:/Program Files/KDiff3/kdiff3.exe
+	cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+[mergetool]
+	prompt = false
+```
 
 
-```git config --global diff.tool diffmerge```\
-```git config --global difftool.diffmerge.cmd "C:\Program Files\SourceGear\Common\DiffMerge\sgdm.exe \"$LOCAL\" \"$REMOTE\""```\
-```git config --global merge.tool diffmerge```\
-```git config --global mergetool.diffmerge.trustExitCode true```\
-```git config --global mergetool.diffmerge.cmd "C:/Program\ Files/SourceGear/Common/DiffMerge/gdm.exe-merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\""```\
-```git config --global difftool vscode```\
-```git config --global difftool.vs.cmd "code --wait --diff $LOCAL $REMOTE"```
 
 # Repos
 
@@ -134,13 +180,6 @@ Viewing History
 
 ```git ls-tree HEAD~1```
 
-============
-
-git stash      only tracked files will be stashed.
-
-git stash apply
-
-
 # Branches
 
 
@@ -175,9 +214,15 @@ git stash apply
 ```git pull origin master```
 * pulls changes from the origin remote, master branch
 * does current local branch have to be the master?
+* todo
+
+```git fetch origin```
+* todo
+  
+```git pull origin```
+* todo
 
 ## Deleting branches
-
 
 ```git branch -d <branch name>```
 * deletes the local branch
@@ -191,20 +236,27 @@ Use `-D` option (instead of `-d`) to forcibly delete the local branch, i.e. disc
 * merges &lt;branch name> into the current branch
 
 
-## Merging branches
-```git merge <branch name>```
-* merges the current branch to &lt;`branch name>`.
+# Diffing and Merging
 
+```git diff```
+
+```git difftool```
+* Shows the unstaged differences only.
+
+```git merge <branch name>```
 
 ```git mergetool <branch name>```
+* Shows the current differences (staged and unstaged) to the master branch.
 
-
-
-* merges the current branch to &lt;`branch name>` (uses the configured merge tool)
+```git merge```
 
 ```git mergetool```
+* todo
 
-```git push origin master```
+```git merge <branch name>```
+
+```git mergetool <branch name>```
+* both merge the current branch to &lt;`branch name>`.
 
 
 # Querying the Repo
