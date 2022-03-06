@@ -62,33 +62,42 @@ TODO
 ```
 
 ### Configure using DiffMerge
-```
-git config --global diff.tool diffmerge
-git config --global difftool.diffmerge.cmd "C:\Program Files\SourceGear\Common\DiffMerge\sgdm.exe \"$LOCAL\" \"$REMOTE\""
-
-git config --global merge.tool diffmerge
-git config --global mergetool.diffmerge.trustExitCode true
-git config --global mergetool.diffmerge.cmd "C:/Program\ Files/SourceGear/Common/DiffMerge/gdm.exe-merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\""
-```
-
-### Configure using KDiff3
-.gitconfg file
+Add the following to ```C:\Users\garym\.gitconfg```
 
 ```
 [diff]
-	tool = kdiff3
-[difftool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe
-	cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
+	tool = diffmerge
+[difftool "diffmerge"]
+	cmd = C:/Program\\ Files/SourceGear/Common/DiffMerge/sgdm.exe \"$LOCAL\" \"$REMOTE\"
 [difftool]
-	prompt = false	 
+    prompt = false	 
 [merge]
-	tool = kdiff3
-[mergetool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe
-	cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	tool = diffmerge
+[mergetool "diffmerge"]
+	trustExitCode = true
+	cmd = C:/Program\\ Files/SourceGear/Common/DiffMerge/sgdm.exe -merge -result=\"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
 [mergetool]
-	prompt = false
+    prompt = false
+```
+
+### Configure using KDiff3
+Add the following to ```C:\Users\garym\.gitconfg```
+
+```
+[diff]
+    tool = kdiff3
+[difftool "kdiff3"]
+    path = C:/Program Files/KDiff3/kdiff3.exe
+    cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$LOCAL\" \"$REMOTE\"
+[difftool]
+    prompt = false	 
+[merge]
+    tool = kdiff3
+[mergetool "kdiff3"]
+    path = C:/Program Files/KDiff3/kdiff3.exe
+    cmd = \"C:/Program Files/KDiff3/kdiff3.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+[mergetool]
+    prompt = false
 ```
 
 
