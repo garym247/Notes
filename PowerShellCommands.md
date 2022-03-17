@@ -62,6 +62,14 @@ Examples:
  `Get-Host | Select-Object Version`
 
 
-CCC and ACS-Devlopment
+
 
 Get-AzContext
+
+
+
+
+C:\Users\garym\OneDrive\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1
+
+
+CTRL + SHIFT + , to edit your settings.json

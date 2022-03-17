@@ -2,8 +2,13 @@
 
 The following can be typed into the Windows Explorer folder bar:
 
-
 <table>
+  <tr>
+   <td><code>%PROGRAMDATA%</code>
+   </td>
+   <td>Takes you to you machine's program directory
+   </td>
+  </tr>
   <tr>
    <td><code>%APPDATA%</code>
    </td>
@@ -24,16 +29,33 @@ The following can be typed into the Windows Explorer folder bar:
   </tr>
 </table>
 
+**Microsoft Management Console (MMC)**
+
+To run the Microsoft Management Console simply type ```mmc```
+
+MSC = Microsoft Saved Console
+
+MSC files are snap-in control files that are associated with the Microsoft Management Console on Windows machines to run administrative tasks.
+
+<table>
+  <tr>
+   <td><code>lusrmgr.msc</code></td>
+   <td>Local User and Groups Manager</td>
+  </tr>
+  <tr>
+   <td><code>certmgr.msc</code></td>
+   <td>Certificate Manager</td>
+  </tr>
+</table>
+
 
 **UNICODE characters**
-
- 
 
 To get the euro symbol (€) press `Ctrl-Alt-4`.
 
  
-
 Alternatively for the snowman symbol go for http://unicodesnowmanforyou.com
+
 
 **To delete a partition via the command line:**
 
