@@ -1,5 +1,3 @@
-# XAML
-
 # Control panel types;
 * StackPanel
 
