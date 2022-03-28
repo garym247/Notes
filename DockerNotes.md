@@ -28,12 +28,6 @@ version: '3'
 services:
   web:
 
-
-
-
-
-
-  a
 # Image Commands
 
 ```docker build``` 

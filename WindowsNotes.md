@@ -1,4 +1,4 @@
-**Windows Explorer**
+## Windows Explorer
 
 The following can be typed into the Windows Explorer folder bar:
 
@@ -6,36 +6,34 @@ The following can be typed into the Windows Explorer folder bar:
   <tr>
    <td><code>%PROGRAMDATA%</code>
    </td>
-   <td>Takes you to you machine's program directory
+   <td>Takes you to your machine's program directory
    </td>
   </tr>
   <tr>
    <td><code>%APPDATA%</code>
    </td>
-   <td>goes to your application data <code>Roaming</code> directory
+   <td>Takes you to your application data <code>Roaming</code> directory
    </td>
   </tr>
   <tr>
    <td><code>%LOCALAPPDATA%</code>
    </td>
-   <td>goes to your application data <code>Local</code> directory
+   <td>Takes you to your application data <code>Local</code> directory
    </td>
   </tr>
   <tr>
    <td><code>cmd</code>
    </td>
-   <td>to open a command prompt in the currently selected directory
+   <td>Opens a command prompt in the currently selected directory
    </td>
   </tr>
 </table>
 
-**Microsoft Management Console (MMC)**
+## Microsoft Management Console (MMC)
 
 To run the Microsoft Management Console simply type ```mmc```
 
-MSC = Microsoft Saved Console
-
-MSC files are snap-in control files that are associated with the Microsoft Management Console on Windows machines to run administrative tasks.
+MSC (Microsoft Saved Console) files are snap-in control files that are associated with the Microsoft Management Console on Windows machines to run administrative tasks.
 
 <table>
   <tr>
@@ -49,7 +47,7 @@ MSC files are snap-in control files that are associated with the Microsoft Manag
 </table>
 
 
-**UNICODE characters**
+## UNICODE characters
 
 To get the euro symbol (€) press `Ctrl-Alt-4`.
 
@@ -61,50 +59,35 @@ Alternatively for the snowman symbol go for http://unicodesnowmanforyou.com
 
 Run `diskpart` application
 
-
-    rescan
-
-
-    list disk
-
-
-    select disk &lt;disk number>
-
-
-    list partition
-
-
-    select partition &lt;partition number>
-
-
-    delete partition override
+```
+rescan
+list disk
+select disk <disk number>
+list partition
+select partition <partition number>
+delete partition override
+```
 
 **To set up network drives via a .bat file**
 
+```net use <drive letter>: <unc path> /savecred /persistent:yes /y```
 
-```
-net use <drive letter>: <unc path> /savecred /persistent:yes /y
-```
+e.g. ```net use p: \\3620gary\packages /savecred /persistent:yes /y```
 
 
-**<span style="text-decoration:underline;">Microsoft Outlook</span>**
+
+## Microsoft Outlook
 
 Ctrl-K to see a list of suggestions that match a given string pattern.
 
-**<span style="text-decoration:underline;">Handy Tools</span>**
+## Handy Tools
 
-NEWT
-
-clumsy
-
-WireShark
+* NEWT
+* Clumsy
+* WireShark
 
 To see what status of the ports on a PC:
 
-
-```
-netstat -an
-```
-
+`netstat -an`
 
 Piping this into the find command is a handy way to find particular ports, e.g. to find ports in the listening state, `netstat -an|find /i "listening"`
