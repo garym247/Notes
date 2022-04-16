@@ -1,6 +1,13 @@
 # dotnet --version
 Displays the version of dotnet.
 
+# dotnet
+dotnet --list-sdks
+
+dotnet --list-runtimes
+
+dotnet --info
+
 # dotnet new
 Creates a new project from the given template.
 

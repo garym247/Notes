@@ -22,6 +22,24 @@ The following can be typed into the Windows Explorer folder bar:
    </td>
   </tr>
   <tr>
+   <td><code>%PROGRAMFILES%</code>
+   </td>
+   <td>Takes you to your machines <code>Program Files</code> directory
+   </td>
+  </tr>
+  <tr>
+   <td><code>%PROGRAMFILES(86)%</code>
+   </td>
+   <td>Takes you to your machines <code>Program Files (x86)</code> directory
+   </td>
+  </tr>
+  <tr>
+  <tr>
+   <td><code>%WINDIR%</code>
+   </td>
+   <td>Takes you to your machines Windows directory
+   </td>
+  </tr>
    <td><code>cmd</code>
    </td>
    <td>Opens a command prompt in the currently selected directory
