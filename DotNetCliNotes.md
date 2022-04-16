@@ -54,6 +54,9 @@ and .vscode\\tasks.json files for each project.
 # dotnet run
 * By default, it builds the Debug configuration of the project.
 * To build the Release configuration: dotnet run -c Release
+
+`dotnet run --project <path to filename>.csproj`
+
 # dotnet add
 `dotnet add package`
 # dotnet list
