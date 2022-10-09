@@ -44,10 +44,6 @@ available for Linux and MacOS.
 
 CLR is C#'s equivalent of the Java Virtual Machine.
 
-# nuget
-
-nuget is a package manager (see nuget.org)
-
 # Visual Studio Projects
 
 Differences between .NET Framework and .NET Core projects:
