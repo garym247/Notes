@@ -3,10 +3,14 @@
 * SourceTree (only available for Windows and MacOS)
 * posh-git 
 * Git Extensions (http://gitextensions.github.io)
+* Fork
+
+# Handy VS Code extensions
+* GitLens
+* Git Graph
+* GitHub Pull Requests and Issues
 
 # Configuring Git
-
-
 ## Different ways to configure Git
 
 * system all users (see C:\Program Files\Git\etc\gitconfig)
@@ -100,6 +104,13 @@ Add the following to ```C:\Users\garym\.gitconfg```
     prompt = false
 ```
 
+# Typical Workflows
+
+## Creating a repo and uploading it to GitHub
+Todo
+
+## Cloning a repo from GitHub
+Todo
 
 
 # Repos
