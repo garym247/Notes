@@ -1,14 +1,21 @@
 # Querying DotNet
 
 `dotnet --version`
-Displays the version of dotnet.
+- Displays the version of dotnet.
+
+`dotnet --info`
+Lists the following:
+- .NET SDK version
+- Runtime environment (OS, OS Version, etc)
+- Installed SDKs
+- Instqalled Runtimes 
 
 
 `dotnet --list-sdks`
+- Only lists all the installed SDKs
 
 `dotnet --list-runtimes`
 
-`dotnet --info`
 
 # Creating Solutions with Projects
 
