@@ -17,7 +17,10 @@
 * global       all repos belonging to a user (see C:\Users<username>\.gitconfig)
 * user          local repo for user
 
+## Configure Git to create a main branch rather than master
 
+git config --global init.defaultBranch main
+	
 ## Checking if Git is installed
 ```git --version```
 
