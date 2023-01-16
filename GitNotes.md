@@ -304,7 +304,17 @@ To see the outgoing changesets:
 ```
 TODO
 ```
+Powerful tool to modify the repo history
+	
+git filter-repo --invert-paths --path 'PATH\TO\FILE\FILE.EXT'
+git filter-repo --strip-blobs-bigger-than 10M
 
-
+See
+https://github.com/newren/git-filter-repo
+	
+	
 # To sort
 ```git reset```
+	
+	
+
