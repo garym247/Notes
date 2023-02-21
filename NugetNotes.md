@@ -2,6 +2,11 @@ nuget is a package manager (see nuget.org)
 
 Nuget command line tool (nuget.exe) and the Visual Studio NuGetPackage Manager extension are related but seperate products, i.e. they can have different versions.
 
+```%APPDATA%\NuGet\Nuget.config``` lists all the package sources.
+
+`nuget help`
+- will print out the current version of the Nuget command line tool installed.
+
 `nuget list -Source "http://ecclefechan.indigovision.com/nuget"`
 - lists all the nuget packages (latest version number) available on the package manager http://ecclefechan.indigovision.com/nuget
 
