@@ -60,7 +60,11 @@ MSC (Microsoft Saved Console) files are snap-in control files that are associate
   </tr>
   <tr>
    <td><code>certmgr.msc</code></td>
-   <td>Certificate Manager</td>
+   <td>Certificate Manager (current user)</td>
+  </tr>
+  <tr>
+   <td><code>certlm.msc</code></td>
+   <td>Certificate Manager (local machine)</td>
   </tr>
 </table>
 
